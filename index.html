@@ -78,7 +78,7 @@ button:hover{opacity:0.9}
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.4); /* fixed color */
   border: none;
   color: white;
   width: 42px;
@@ -88,11 +88,15 @@ button:hover{opacity:0.9}
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: none; /* no hover transition */
 }
-.gallery .arrow:hover {
-  background: rgba(255,255,255,0.2);
+.gallery .arrow:hover,
+.gallery .arrow:active,
+.gallery .arrow:focus {
+  background: rgba(0,0,0,0.4); /* keep same color always */
+  outline: none;
 }
+
 .gallery .left { left: 10px; }
 .gallery .right { right: 10px; }
 .gallery .arrow svg {
