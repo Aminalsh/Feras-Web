@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>dinbyggteknik.se</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Din byggteknik i Hultsfred – Bygglovsritningar, 3D Visualisering, Konstruktionsritningar, Konstruktionsberäkning, Dimensioneringskontroll och Klimatdeklaration." />
+  <style>
+:root {
+  --bg:#0f1724;
+  --muted:#94a3b8;
+  --accent:#8fb4ff;
+  --radius:14px;
+  font-family:'Inter',system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body {
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#071021 60%);
+  color:#e6eef8;
+  padding:20px;
+  line-height:1.45;
+}
+.container{max-width:1100px;margin:0 auto}
+header {
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 0;flex-wrap:wrap;gap:12px;
+}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#6dd3b3);display:flex;align-items:center;justify-content:center;font-weight:700;color:#07203a;overflow:hidden}
+.logo img{max-width:93px;max-height:93px;object-fit:contain;display:block}
+.brand h1{font-family:'Playfair Display',serif;font-size:18px;margin:0}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
+nav a:hover{color:var(--accent)}
+.hero{text-align:center;padding:48px 0}
+.hero h2{font-family:'Playfair Display',serif;font-size:32px;margin-bottom:12px}
+.hero p{max-width:720px;margin:0 auto;color:var(--muted)}
+.profile{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px;margin:40px 0;text-align:center}
+.profile img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid var(--accent)}
+.profile-info h3{margin:0;font-family:'Playfair Display',serif}
+.profile-info p{margin:4px 0;color:var(--muted)}
+.section{margin:48px 0}
+.section h3{font-family:'Playfair Display',serif;margin-bottom:12px}
+footer{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.03);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;color:var(--muted)}
+form{display:grid;gap:12px;max-width:500px}
+input,textarea{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:#fff;font-size:14px}
+button{padding:10px 16px;border:none;border-radius:10px;background:var(--accent);color:#07203a;font-weight:700;cursor:pointer}
+button:hover{opacity:0.9}
+
+/* Elegant image carousel */
+.gallery {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery img {
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+  transition: opacity 0.5s ease;
+}
+
+.gallery img.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Arrow buttons */
+.gallery .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+.gallery .arrow:hover {
+  background: rgba(255,255,255,0.2);
+}
+.gallery .left { left: 10px; }
+.gallery .right { right: 10px; }
+.gallery .arrow svg {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+  stroke-width: 2;
+  fill: none;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="Logo.png" alt="company Logo"></div>
+        <div>
+          <h1>Din byggteknik i Hultsfred</h1>
+          <div class="muted" style="font-size:13px">Bygglov & Konstruktion med kvalitet</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#bygglov">Bygglovsritningar</a>
+        <a href="#visualisering">3D Visualisering</a>
+        <a href="#ritningar">Konstruktionsritningar</a>
+        <a href="#berakning">Konstruktionsberäkning</a>
+        <a href="#klimat">Klimatdeklaration</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Välkommen till</h2>
+	  <h2>Din byggteknik i Hultsfred</h2>
+      <p>Här hittar du hjälp med ditt bygglov snabbt för konkurrenskraftigt pris. Vi erbjuder Bygglovsritningar, 3D Visualisering, Konstruktionsritningar, Konstruktionsberäkning & Dimensioneringskontroll samt Klimatdeklaration.</p>
+    </section>
+
+    <!-- Bygglovsritningar -->
+    <section id="bygglov" class="section">
+      <h3>Bygglovsritningar</h3>
+      <p class="muted">Vi hjälper dig med att upprätta de krävande ritningar ...</p>
+      <div class="gallery" data-gallery>
+        <button class="arrow left" aria-label="Föregående">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <img src="Bygglovsritninger/Picture0.jpg" class="active" alt="Picture0">
+        <img src="Bygglovsritninger/Picture1.jpg" alt="Picture1">
+        <img src="Bygglovsritninger/Picture2.jpg" alt="Picture2">
+        <img src="Bygglovsritninger/Picture3.jpg" alt="Picture3">
+        <img src="Bygglovsritninger/Picture4.jpg" alt="Picture4">
+        <button class="arrow right" aria-label="Nästa">
+          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </section>
+	
+	 <!-- Konstruktionsritningar -->
+    <section id="ritningar" class="section">
+      <h3>Konstruktionsritningar</h3>
+      <p class="muted">Vi levererar detaljerade konstruktionsritningar ...</p>
+      <div class="gallery" data-gallery>
+        <button class="arrow left"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <img src="Konstruktionsiritningar/img0.jpg" class="active" alt="img0">
+        <img src="Konstruktionsiritningar/img1.jpg" alt="img1">
+        <img src="Konstruktionsiritningar/img2.jpg" alt="img2">
+        <img src="Konstruktionsiritningar/img3.jpg" alt="img3">
+        <img src="Konstruktionsiritningar/img4.jpg" alt="img4">
+        <button class="arrow right"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </section>
+	
+    <section id="berakning" class="section">
+      <h3>Konstruktionsberäkning och Dimensioneringskontroll</h3>
+      <p class="muted">Vi är erfarna med att dimensionera olika typer av byggnader ...</p>
+    </section>
+
+    <!-- 3D Visualisering -->
+    <section id="visualisering" class="section">
+      <h3>3D Visualisering</h3>
+      <p class="muted">Vi levererar detaljerade konstruktionsritningar ...</p>
+      <div class="gallery" data-gallery>
+        <button class="arrow left"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <img src="Visualisierung 3D/Pic0.jpg" class="active" alt="Pic0">
+        <img src="Visualisierung 3D/Pic2.jpg" alt="Pic2">
+        <img src="Visualisierung 3D/Pic3.png" alt="Pic3">
+		<img src="Visualisierung 3D/Pic4.png" alt="Pic4">
+        <button class="arrow right"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </section>
+
+   
+
+    <!-- Klimatdeklaration -->
+    <section id="klimat" class="section">
+      <h3>Klimatdeklaration</h3>
+      <p class="muted">Från den 1 januari 2022 gäller krav på klimatdeklaration ...</p>
+      <div class="gallery" data-gallery>
+        <button class="arrow left"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <img src="Klima/Picture1.jpg" class="active" alt="Picture1">
+        <button class="arrow right"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </section>
+
+
+    <section class="profile">
+      <div class="profile-info">
+        <h3>Feras Alshikh Mohamad</h3>
+        <p>0700 242 837</p>
+        <p>feras.alshikh.mohammad@gmail.com</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Kontakt</h3>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Ditt namn" required>
+        <input type="email" name="email" placeholder="Din e-post" required>
+        <input type="tel" name="phone" placeholder="Ditt telefonnummer" required>
+        <textarea name="message" placeholder="Meddelande" required></textarea>
+        <button type="submit">Skicka</button>
+      </form>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Linn Konstruktionsbyrå (LKB AB)</div>
+      <div>Stockholm, Sverige</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Carousel logic with looping
+    document.querySelectorAll('[data-gallery]').forEach(gallery => {
+      const images = gallery.querySelectorAll('img');
+      let current = 0;
+      const prevBtn = gallery.querySelector('.left');
+      const nextBtn = gallery.querySelector('.right');
+
+      function showImage(index) {
+        images.forEach((img, i) => img.classList.toggle('active', i === index));
+      }
+
+      prevBtn?.addEventListener('click', () => {
+        current = (current - 1 + images.length) % images.length; // loops to last if negative
+        showImage(current);
+      });
+
+      nextBtn?.addEventListener('click', () => {
+        current = (current + 1) % images.length; // loops to first after last
+        showImage(current);
+      });
+    });
+  </script>
+</body>
+</html>
+
