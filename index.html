@@ -9,6 +9,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <meta name="description" content="Din byggteknik i Hultsfred – Bygglovsritningar, Konstruktionsritningar, Dimensioneringskontroll och Klimatdeklaration, 3D Visualisering, Konstruktionsberäkning." />
   <style>
+	  .contact-wrapper-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.profile-info {
+  color: var(--muted);
+}
+
+.profile-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.profile-info a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.profile-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+}
+
 :root {
   --bg:#0f1724;
   --muted:#94a3b8;
@@ -205,16 +238,16 @@ button:hover{opacity:0.9}
     </section>
 
 
-    <section class="profile">
-      <div class="profile-info">
-        <h3>Dinbyggteknik i Hultsfred</h3>
-        <p>Tältstigen 8,577 36 Hultsfred</p>
-        <p>feras@dinbyggteknik.se</p>
-		<p>0700242837</p>
-      </div>
-    </section>
+       <section id="contact" class="section contact-section">
+  <div class="contact-wrapper">
+    <div class="profile-info">
+      <h3>Dinbyggteknik i Hultsfred</h3>
+      <p>Tältstigen 8, 577 36 Hultsfred</p>
+      <p><a href="mailto:feras@dinbyggteknik.se">feras@dinbyggteknik.se</a></p>
+      <p><a href="tel:0700242837">0700242837</a></p>
+    </div>
 
-    <section id="contact" class="section">
+    <div class="contact-form">
       <h3>Kontakta oss</h3>
       <form action="https://formspree.io/f/your-form-id" method="POST">
         <input type="text" name="name" placeholder="Ditt namn" required>
@@ -222,10 +255,12 @@ button:hover{opacity:0.9}
         <input type="tel" name="phone" placeholder="Ditt telefonnummer" required>
         <textarea name="message" placeholder="Meddelande" required></textarea>
         <button type="submit">Skicka</button>
-		<h3></h3>
-		<h3 style="font-size:15px;" >Din byggteknik i Hultsfred är godkänd för F-skatt</h3>
+        <h3></h3>
+        <h3>Din byggteknik i Hultsfred är godkänd för F-skatt</h3>
       </form>
-    </section>
+    </div>
+  </div>
+</section>
 
     <footer>
       <div>© <span id="year"></span> Din byggteknik i Hultsfred </div>
